@@ -13,9 +13,11 @@ var bio = {
     "skills": [ "Photoshop", "Illustrator", "Premiere Pro"],
     "biopic": "https://avatars3.githubusercontent.com/u/2975322?v=3&s=460",
     "display": function () {
-      if (bio.name !== false) {
-        console.log(bio.name);
-      }
+      var name = HTMLheaderName.replace("%data%", bio.name);
+      $("#header").prepend(name);
+      var role = HTMLheaderRole.replace("%data%", bio.role);
+      $("#header").append(role);
+      console.log("Hey! This Shit Works!");
     }
 };
 
@@ -74,3 +76,4 @@ var bio = {
 //         }],
 //         "display": function () {}
 //     };
+bio.display();
