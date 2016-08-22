@@ -1,114 +1,72 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
-* `bio` contains:
-
-          name : string
-          role : string
-          contacts : an object with
-                mobile: string
-                email: string
-                github: string
-                twitter: string (optional)
-                location: string
-          welcomeMessage: string
-          skills: array of strings
-          biopic: string url
-          display: function taking no parameters
-
-* `education` contains:
-
-          schools: array of objects with
-               name: string
-               location: string
-               degree: string
-               majors: array of strings
-               dates: string (works with a hyphen between them)
-               url: string
-          onlineCourses: array of objects with
-               title: string
-               school: string
-               dates: string (works with a hyphen between them)
-               url: string
-          display: function taking no parameters
-
-* `work` contains
-
-          jobs: array of objects with
-               employer: string
-               title: string
-               location: string
-               dates: string (Can be 'in progress')
-               description: string
-          display: function taking no parameters
-
-* `projects` contains:
-
-          projects: array of objects with
-                title: string
-                dates: string (works with a hyphen between them)
-                description: string
-                images: array with string urls
-          display: function taking no parameters
- */
-
- // Bio Oject
+// Bio Oject
 var bio = {
-  "name" : "string",
-   "role" : "string",
-   "contacts" : [
-         "mobile": "string",
-         "email": "string",
-         "github": "string",
-         "twitter": "string",
-         "location": "string",
-       ],
-   "welcomeMessage": "string"
-   "skills": [
-     "skill":"string",
-     "skill":"string"
-   ],
-   "biopic": "string url"
-   "display": function() {}
+    "name": "Bil Benhamou",
+    "role": "Front-End Web Developer",
+    "contacts": [{
+        "mobile": "+971 55 714 40 39",
+        "email": "bil@benhamou.be",
+        "github": "TheBilTheory",
+        "twitter": "@TheBilTheory",
+        "location": "Dubai, UAE"
+    }],
+    "welcomeMessage": "Yo",
+    "skills": [ "Photoshop", "Illustrator", "Premiere Pro"],
+    "biopic": "https://avatars3.githubusercontent.com/u/2975322?v=3&s=460",
+    "display": function () {}
 };
 
 // Education Object
 var education = {
-  "schools": [
-    "name": "string",
-    "location": "string",
-    "degree": "string",
-    "majors": "array of strings",
-    "dates": "string (works with a hyphen between them)",
-    "url": "string"
-          ],
-  "onlineCourses": [
-    "title": "string",
-    "school": "string",
-    "dates": "string (works with a hyphen between them)",
-    "url": "string",
-    ],
- "display": function() {}
-};
+        "schools": [{
+            "name": "Leuven",
+            "location": "Brussels",
+            "degree": "N/A",
+            "majors": "The Best",
+            "dates": "2006-2009",
+            "url": "#"
+        }],
+        "onlineCourses": [{
+            "title": "Front-End Web Developer Nanodegree",
+            "school": "Udacity",
+            "dates": "In Progress",
+            "url": "#"
+        }],
+        "display": function () {}
+    };
 
 // Work Object
 var work = {
-  "jobs": [
-    "employer": "string",
-    "title": "string",
-    "location": "string",
-    "dates": "string (Can be 'in progress')",
-    "description": "string",
-  ],
-  "display": function() {}
-};
+        "jobs": [{
+            "employer": "Propertyfinder",
+            "title": "UI Designer",
+            "location": "Dubai",
+            "dates": "In Progress",
+            "description": " User Interface Designer"
+        },
+            {
+                "employer": "Bisnode",
+                "title": "UI Designer",
+                "location": "Brussels",
+                "dates": "2014-2015",
+                "description": "Campaign Architect"
+            },
+            {
+                "employer": "Catalyst IT Limited",
+                "title": "Web Integrator",
+                "location": "Dubai",
+                "dates": "2012-2013",
+                "description": "Integrating a Design for the Open Universities"
+            }],
+        "display": function () {}
+    };
 
-
+// Projects Object
 var projects = {
-  "projects": [
-    "title": "string"
-    "dates": "string (works with a hyphen between them)"
-    "description": "string"
-    "images": "array with string urls"
-  ],
-  "display": function() {}
-}
+        "projects": [{
+            "title": "Online Portfolio",
+            "dates": "2016",
+            "description": "Online Portfolio Project created for FEND",
+            "images": "Image Url"
+        }],
+        "display": function () {}
+    };
