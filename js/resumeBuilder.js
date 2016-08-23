@@ -174,7 +174,6 @@ var work = {
               location    = HTMLworkLocation.replace("%data%", job.location);
               dates       = HTMLworkDates.replace("%data%", job.dates);
               description = HTMLworkDescription.replace("%data%", job.description);
-
               $("#workExperience").append(HTMLworkStart);
               $(".work-entry").last().append(employer);
               $(".work-entry").last().append(title);
@@ -185,18 +184,51 @@ var work = {
         }
     };
 
-// // Projects Section
-// var projects = {
-//         "projects": [{
-//             "title": "Online Portfolio",
-//             "dates": "2016",
-//             "description": "Online Portfolio Project created for FEND",
-//             "images": "Image Url"
-//         }],
-//         "display": function () {}
-//     };
+// Projects Section
+var projects = {
+        "projects": [{
+            "title": "Flyer",
+            "dates": "2016",
+            "description": "Flyer Creation for fastlife",
+            "images": ["https://dl.dropboxusercontent.com/s/t8atyr14fodgu5g/fastlife.png", "https://dl.dropboxusercontent.com/s/t8atyr14fodgu5g/fastlife.png"]
+        },
+        {
+            "title": "Online Portfolio",
+            "dates": "2016",
+            "description": "Online Portfolio Project created for FEND",
+            "images": ["https://dl.dropboxusercontent.com/s/0ne9zzeaaw9x9qc/bil_logo.png", "https://dl.dropboxusercontent.com/s/0ne9zzeaaw9x9qc/bil_logo.png"]
+        },
+        {
+            "title": "Brand Development",
+            "dates": "2016",
+            "description": "Brand development for Rush Rentals",
+            "images": ["https://dl.dropboxusercontent.com/s/8kml2hnkk1rb57p/rush-rentals.png", "https://dl.dropboxusercontent.com/s/0ne9zzeaaw9x9qc/bil_logo.png"]
+        }
+      ],
+        "display": function () {
+          var title,
+              dates,
+              description,
+              images;
+          projects.projects.forEach(function (project) {
+              title       = HTMLprojectTitle.replace("%data%", project.title);
+              dates       = HTMLprojectDates.replace("%data%", project.dates);
+              description = HTMLprojectDescription.replace("%data%", project.description);
+              images      = HTMLprojectImage.replace("%data%", project.images);
+
+              $("#projects").append(HTMLprojectStart);
+              $(".project-entry").last().append(title);
+              $(".project-entry").last().append(dates);
+              $(".project-entry").last().append(description);
+              project.images.forEach(function () {
+                $(".project-entry").last().append(images);
+              });
+          });
+        }
+    };
 
 //Section triggers
 bio.display();
 education.display();
 work.display();
+projects.display();
