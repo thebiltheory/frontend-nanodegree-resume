@@ -23,13 +23,13 @@ var bio = {
             location = HTMLlocation.replace("%data%", bio.contacts.location),
             bioPicture = HTMLbioPic.replace("%data%", bio.biopic),
             welcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-            $("#header").prepend(name);
+        $("#header").prepend(name);
         $(role).insertBefore("#topContacts");
-        $("#topContacts").append(mobile);
-        $("#topContacts").append(email);
-        $("#topContacts").append(twitter);
-        $("#topContacts").append(github);
-        $("#topContacts").append(location);
+        $("#topContact, #footerContacts").append(mobile);
+        $("#topContacts, #footerContacts").append(email);
+        $("#topContacts, #footerContacts").append(twitter);
+        $("#topContacts, #footerContacts").append(github);
+        $("#topContacts, #footerContacts").append(location);
         $("#header").append(bioPicture);
         $("#header").append(welcomeMsg);
         $("#header").append(HTMLskillsStart);
