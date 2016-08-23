@@ -180,7 +180,7 @@ var work = {
               $(".work-entry").last().append(location);
               $(".work-entry").last().append(dates);
               $(".work-entry").last().append(description);
-          })
+          });
         }
     };
 
