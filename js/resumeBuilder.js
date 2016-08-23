@@ -22,7 +22,7 @@ var bio = {
             github = HTMLgithub.replace("%data%", bio.contacts.github),
             location = HTMLlocation.replace("%data%", bio.contacts.location),
             bioPicture = HTMLbioPic.replace("%data%", bio.biopic),
-            welcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
+            welcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
             $("#header").prepend(name);
         $(role).insertBefore("#topContacts");
         $("#topContacts").append(mobile);
@@ -32,7 +32,7 @@ var bio = {
         $("#topContacts").append(location);
         $("#header").append(bioPicture);
         $("#header").append(welcomeMsg);
-        $("#header").append(skillsTitle);
+        $("#header").append(HTMLskillsStart);
         var skill;
         for (skill in bio.skills) {
             skill = HTMLskills.replace("%data%", bio.skills[skill]);
