@@ -12,27 +12,26 @@ var bio = {
     "welcomeMessage": "Yo",
     "skills": ["Photoshop", "Illustrator", "Premiere Pro", "HTML5/ CSS3", "Javascript"],
     "biopic": "https://avatars3.githubusercontent.com/u/2975322?v=3&s=460",
-    "display": function () {
+    "display": function() {
         "use strict";
-        var name = HTMLheaderName.replace("%data%", bio.name);
-        $("#header").prepend(name);
-        var role = HTMLheaderRole.replace("%data%", bio.role);
+        var name = HTMLheaderName.replace("%data%", bio.name),
+            role = HTMLheaderRole.replace("%data%", bio.role),
+            mobile = HTMLmobile.replace("%data%", bio.contacts.mobile),
+            email = HTMLemail.replace("%data%", bio.contacts.email),
+            twitter = HTMLtwitter.replace("%data%", bio.contacts.twitter),
+            github = HTMLgithub.replace("%data%", bio.contacts.github),
+            location = HTMLlocation.replace("%data%", bio.contacts.location),
+            bioPicture = HTMLbioPic.replace("%data%", bio.biopic),
+            welcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
+            $("#header").prepend(name);
         $(role).insertBefore("#topContacts");
-        var mobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
         $("#topContacts").append(mobile);
-        var email = HTMLemail.replace("%data%", bio.contacts.email);
         $("#topContacts").append(email);
-        var twitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
         $("#topContacts").append(twitter);
-        var github = HTMLgithub.replace("%data%", bio.contacts.github);
         $("#topContacts").append(github);
-        var location = HTMLlocation.replace("%data%", bio.contacts.location);
         $("#topContacts").append(location);
-        var bioPicture = HTMLbioPic.replace("%data%", bio.biopic);
         $("#header").append(bioPicture);
-        var welcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
         $("#header").append(welcomeMsg);
-        var skillsTitle = HTMLskillsStart;
         $("#header").append(skillsTitle);
         var skill;
         for (skill in bio.skills) {
@@ -85,30 +84,14 @@ var education = {
     "display": function() {
         'use strict';
         // Schools
-        // var school;
-        // for (school in education.schools) {
-        //   $("#education").append(HTMLschoolStart);
-        //   var schoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
-        //   $(".education-entry").append(schoolName);
-        //   var schoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-        //   $(".education-entry").append(schoolDegree);
-        //   var schoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-        //   $(".education-entry").append(schoolDates);
-        //   var schoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-        //   $(".education-entry").append(schoolLocation);
-        //   var schoolMajors = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
-        //   $(".education-entry").append(schoolMajors);
-        //   console.log("schooool");
-        // }
-
         //Example Usage: forEach Loop
         var schoolName, schoolDegree, schoolDates, schoolLocation, schoolMajors;
-        education.schools.forEach(function (es) {
-          schoolName = HTMLschoolName.replace("%data%", es.name);
-          schoolDegree = HTMLschoolDegree.replace("%data%", es.degree);
-          schoolDates = HTMLschoolDates.replace("%data%", es.dates);
-          schoolLocation = HTMLschoolLocation.replace("%data%", es.location);
-          schoolMajors = HTMLschoolMajor.replace("%data%", es.majors);
+        education.schools.forEach(function(es) {
+            schoolName = HTMLschoolName.replace("%data%", es.name);
+            schoolDegree = HTMLschoolDegree.replace("%data%", es.degree);
+            schoolDates = HTMLschoolDates.replace("%data%", es.dates);
+            schoolLocation = HTMLschoolLocation.replace("%data%", es.location);
+            schoolMajors = HTMLschoolMajor.replace("%data%", es.majors);
             $("#education").append(HTMLschoolStart);
             $(".education-entry").last().append(schoolName);
             $(".education-entry").last().append(schoolDegree);
@@ -122,17 +105,17 @@ var education = {
             onlineCourseSchool,
             onlineCourseDates,
             onlineCourseUrl;
-        education.onlineCourses.forEach(function (course) {
-          onlineCourseTitle   = HTMLonlineTitle.replace("%data%", course.title);
-          onlineCourseSchool  = HTMLonlineSchool.replace("%data%", course.school);
-          onlineCourseDates   = HTMLonlineDates.replace("%data%", course.dates);
-          onlineCourseUrl     = HTMLonlineURL.replace("%data%", course.url);
-          $("#education").last().append(HTMLschoolStart);
-          $(".education-entry").last().append(onlineCourseTitle);
-          $(".education-entry").last().append(onlineCourseSchool);
-          $(".education-entry").last().append(onlineCourseDates);
-          $(".education-entry").last().append(onlineCourseUrl);
-          console.log("onlineCourse");
+        education.onlineCourses.forEach(function(course) {
+            onlineCourseTitle = HTMLonlineTitle.replace("%data%", course.title);
+            onlineCourseSchool = HTMLonlineSchool.replace("%data%", course.school);
+            onlineCourseDates = HTMLonlineDates.replace("%data%", course.dates);
+            onlineCourseUrl = HTMLonlineURL.replace("%data%", course.url);
+            $("#education").last().append(HTMLschoolStart);
+            $(".education-entry").last().append(onlineCourseTitle);
+            $(".education-entry").last().append(onlineCourseSchool);
+            $(".education-entry").last().append(onlineCourseDates);
+            $(".education-entry").last().append(onlineCourseUrl);
+            console.log("onlineCourse");
         });
     }
 };
