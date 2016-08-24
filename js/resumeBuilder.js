@@ -99,7 +99,7 @@ var education = {
             $(".education-entry").last().append(schoolLocation);
             es.majors.forEach(function (major) {
               schoolMajors = HTMLschoolMajor.replace("%data%", major);
-              $(".education-entry").append(schoolMajors);
+              $(".education-entry").last().append(schoolMajors);
             });
         });
         // Online Courses
