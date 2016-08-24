@@ -37,7 +37,6 @@ var bio = {
         bio.skills.forEach(function (skill) {
           bioSkills = HTMLskills.replace("%data%", skill);
           $("#skills").append(bioSkills);
-          console.log("ca passe");
         });
     }
 };
@@ -118,7 +117,6 @@ var education = {
             $(".education-entry").last().append(onlineCourseSchool);
             $(".education-entry").last().append(onlineCourseDates);
             $(".education-entry").last().append(onlineCourseUrl);
-            console.log("onlineCourse");
         });
     }
 };
