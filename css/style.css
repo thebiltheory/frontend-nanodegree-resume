@@ -21,12 +21,15 @@ h6 {
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+  padding: 1% 5%;
+  margin: 10px auto;
+  background: #fafafa;
+  max-width: 79%;
 }
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #e57373;
   line-height: 48px;
   display: inline;
 }
@@ -91,6 +94,9 @@ a {
   margin-top: 10px;
   display: block;
 }
+div[class$="entry"] a:nth-of-type(1) {
+  font-size: 1.3em;
+}
 
 .welcome-message {
   font-style: italic;
@@ -100,16 +106,16 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #e57373;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #e57373;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #e57373;
 }
 
 .white-text {
@@ -129,7 +135,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #424242;
 }
 
 .flex-box {
@@ -161,6 +167,10 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 
 img {
