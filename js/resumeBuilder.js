@@ -113,8 +113,8 @@ var education = {
             onlineCourseDates = HTMLonlineDates.replace("%data%", course.dates);
             onlineCourseUrl = HTMLonlineURL.replace("%data%", course.url);
             $("#education").last().append(HTMLschoolStart);
-            $(".education-entry").last().append(onlineCourseTitle);
-            $(".education-entry").last().append(onlineCourseSchool);
+            $(".education-entry").last().append(onlineCourseTitle + onlineCourseSchool);
+            // $(".education-entry").last().append(onlineCourseSchool);
             $(".education-entry").last().append(onlineCourseDates);
             $(".education-entry").last().append(onlineCourseUrl);
         });
@@ -203,8 +203,15 @@ var projects = {
     }
 };
 
+var gmap = {
+  "display": function () {
+    $("#mapDiv").append(googleMap);
+  }
+};
+
 //Section triggers
 bio.display();
 education.display();
 work.display();
 projects.display();
+gmap.display();

@@ -73,21 +73,21 @@ $(document).ready(function() {
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in the lesson Flow Control from JavaScript Basics.
 */
-// var clickLocations = [];
-//
-// function logClicks(x,y) {
-//   clickLocations.push(
-//     {
-//       x: x,
-//       y: y
-//     }
-//   );
-//   console.log('x location: ' + x + '; y location: ' + y);
-// }
-//
-// $(document).click(function(loc) {
-//   // your code goes here!
-// });
+var clickLocations = [];
+
+function logClicks(x,y) {
+  clickLocations.push(
+    {
+      x: x,
+      y: y
+    }
+  );
+  console.log('x location: ' + x + '; y location: ' + y);
+}
+
+$(document).click(function(loc) {
+  // your code goes here!
+});
 
 
 
@@ -238,12 +238,12 @@ function initializeMap() {
 Uncomment the code below when you're ready to implement a Google Map!
 */
 
-// Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+//Calls the initializeMap() function when the page loads
+window.addEventListener('load', initializeMap);
 
-// Vanilla JS way to listen for resizing of the window
-// and adjust map bounds
-//window.addEventListener('resize', function(e) {
+//Vanilla JS way to listen for resizing of the window
+//and adjust map bounds
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+ map.fitBounds(mapBounds);
+});
