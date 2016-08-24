@@ -47,21 +47,21 @@ var education = {
     "schools": [{
         "name": "Leuven",
         "location": "Brussels",
-        "degree": "abc",
+        "degree": "Liscence",
         "majors": ["The Best", "I ever", "Had"],
         "dates": "2006-2009",
         "url": "#"
     }, {
         "name": "Aussie",
         "location": "Sydney",
-        "degree": "def",
+        "degree": "PHD",
         "majors": ["Marvins", "Room"],
         "dates": "2007-2010",
         "url": "#"
     }, {
         "name": "Stree",
         "location": "Bxl",
-        "degree": "sdafa",
+        "degree": "Master Degree",
         "majors": ["King", "Kunta"],
         "dates": "2000-2010",
         "url": "#"
@@ -93,8 +93,8 @@ var education = {
             schoolDates = HTMLschoolDates.replace("%data%", es.dates);
             schoolLocation = HTMLschoolLocation.replace("%data%", es.location);
             $("#education").append(HTMLschoolStart);
-            $(".education-entry").last().append(schoolName);
-            $(".education-entry").last().append(schoolDegree);
+            $(".education-entry").last().append(schoolName + schoolDegree);
+            // $(".education-entry").last().append(schoolDegree);
             $(".education-entry").last().append(schoolDates);
             $(".education-entry").last().append(schoolLocation);
             es.majors.forEach(function (major) {
