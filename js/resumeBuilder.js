@@ -7,7 +7,7 @@ var bio = {
         "email": "bil@benhamou.be",
         "github": "TheBilTheory",
         "twitter": "@TheBilTheory",
-        "location": "Dubai, UAE"
+        "location": "Dubai, Brussels, Sydney"
     },
     "welcomeMessage": "Yo",
     "skills": ["Photoshop", "Illustrator", "Premiere Pro", "HTML5/ CSS3", "Javascript"],
@@ -59,7 +59,7 @@ var education = {
         "url": "#"
     }, {
         "name": "Stree",
-        "location": "Bxl",
+        "location": "Los Angeles",
         "degree": "Master Degree",
         "majors": ["King", "Kunta"],
         "dates": "2000-2010",
