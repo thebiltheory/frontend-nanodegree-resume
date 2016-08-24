@@ -22,7 +22,8 @@ var bio = {
             github = HTMLgithub.replace("%data%", bio.contacts.github),
             location = HTMLlocation.replace("%data%", bio.contacts.location),
             bioPicture = HTMLbioPic.replace("%data%", bio.biopic),
-            welcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+            welcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage),
+            bioSkills;
         $("#header").prepend(name);
         $(role).insertBefore("#topContacts");
         $("#topContact, #footerContacts").append(mobile);
@@ -33,11 +34,11 @@ var bio = {
         $("#header").append(bioPicture);
         $("#header").append(welcomeMsg);
         $("#header").append(HTMLskillsStart);
-        var skill;
-        for (skill in bio.skills) {
-            skill = HTMLskills.replace("%data%", bio.skills[skill]);
-            $("#skills").append(skill);
-        }
+        bio.skills.forEach(function (skill) {
+          bioSkills = HTMLskills.replace("%data%", skill);
+          $("#skills").append(bioSkills);
+          console.log("ca passe");
+        });
     }
 };
 
@@ -47,21 +48,21 @@ var education = {
         "name": "Leuven",
         "location": "Brussels",
         "degree": "abc",
-        "majors": "The Best",
+        "majors": ["The Best", "I ever", "Had"],
         "dates": "2006-2009",
         "url": "#"
     }, {
         "name": "Aussie",
         "location": "Sydney",
         "degree": "def",
-        "majors": "Awesome",
+        "majors": ["Marvins", "Room"],
         "dates": "2007-2010",
         "url": "#"
     }, {
         "name": "Stree",
         "location": "Bxl",
         "degree": "sdafa",
-        "majors": "lol",
+        "majors": ["King", "Kunta"],
         "dates": "2000-2010",
         "url": "#"
     }],
@@ -91,13 +92,15 @@ var education = {
             schoolDegree = HTMLschoolDegree.replace("%data%", es.degree);
             schoolDates = HTMLschoolDates.replace("%data%", es.dates);
             schoolLocation = HTMLschoolLocation.replace("%data%", es.location);
-            schoolMajors = HTMLschoolMajor.replace("%data%", es.majors);
             $("#education").append(HTMLschoolStart);
             $(".education-entry").last().append(schoolName);
             $(".education-entry").last().append(schoolDegree);
             $(".education-entry").last().append(schoolDates);
             $(".education-entry").last().append(schoolLocation);
-            $(".education-entry").last().append(schoolMajors);
+            es.majors.forEach(function (major) {
+              schoolMajors = HTMLschoolMajor.replace("%data%", major);
+              $(".education-entry").append(schoolMajors);
+            });
         });
         // Online Courses
         $("#education").append(HTMLonlineClasses);
